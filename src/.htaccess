@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule ^(odesskaya/).+$  index.html
+RewriteRule ^(nikolaevskaya/).+$  index.html
+RewriteRule ^(khersonskaya/).+$  index.html
+RewriteRule ^(zaporozhskaya/).+$  index.html
+RewriteRule ^(donetskaya/).+$  index.html
+
