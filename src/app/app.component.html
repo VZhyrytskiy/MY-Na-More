@@ -13,31 +13,49 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
-        <!--<li><a href="#">Link</a></li>-->
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            Выбрать море<span class="caret"></span></a>
+            Выбрать место<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li class="dropdown-header">Черное море</li>
-            <li routerLinkActive="active"><a href="#" [routerLink]="['/odesskaya-oblast']">Одесская область</a></li>
-            <li routerLinkActive="active"><a href="#" [routerLink]="['/nikolaevskaya-oblast']">Николаевская область</a></li>
-            <li routerLinkActive="active"><a href="#" [routerLink]="['/khersonskaya-oblast']">Херсонская область</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/odesskaya/oblast']">Одесская область</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/nikolaevskaya/oblast']">Николаевская область</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/khersonskaya/oblast']">Херсонская область</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">Азовское море</li>
-            <li routerLinkActive="active"><a href="#" [routerLink]="['/zaporozhskaya-oblast']">Запорожская область</a></li>
-            <li routerLinkActive="active"><a href="#" [routerLink]="['/donetskaya-oblast']">Донецкая область</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/zaporozhskaya/oblast']">Запорожская область</a></li>
+            <li routerLinkActive="active"><a href="#" [routerLink]="['/donetskaya/oblast']">Донецкая область</a></li>
           </ul>
         </li>
-      </ul>
-      <!--<form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>-->
-      <ul class="nav navbar-nav navbar-right">
+
+        <li routerLinkActive="active"><a href="#" [routerLink]="['/add']">Добавить место</a></li>
+        <li routerLinkActive="active"><a href="#" [routerLink]="['/catalog']">Подобрать место</a></li>
         <li routerLinkActive="active"><a href="#" [routerLink]="['/o-proecte']">О проекте</a></li>
       </ul>
+
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Пароль">
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-default">Войти</button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Зарегистрироваться</a></li>
+            <li><a href="#">Забыли пароль?</a></li>
+          </ul>
+        </div>
+      </form>
+
+
     </div>
   </div>
 </nav>
