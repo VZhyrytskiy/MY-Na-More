@@ -14,6 +14,7 @@ import { OblastComponent } from './components/oblast/oblast.component';
 import { CityComponent } from './components/city/city.component';
 import { PlaceShortCardComponent } from './components/place-short-card/place-short-card.component';
 import { PlaceComponent } from './components/place/place.component';
+import { PlaceFormComponent } from './components/place-form/place-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PlaceComponent } from './components/place/place.component';
     OblastComponent,
     CityComponent,
     PlaceShortCardComponent,
-    PlaceComponent
+    PlaceComponent,
+    PlaceFormComponent
   ],
   imports: [
     BrowserModule,

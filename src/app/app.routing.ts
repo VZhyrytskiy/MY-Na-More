@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './components/page-not-found';
 import { OblastComponent } from './components/oblast';
 import { CityComponent } from './components/city';
 import { PlaceComponent } from './components/place';
+import { PlaceFormComponent } from './components/place-form';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'add',
+    component: PlaceFormComponent
   },
   {
     path: ':oblast/oblast',
