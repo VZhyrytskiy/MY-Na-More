@@ -6,3 +6,6 @@ RewriteRule ^(khersonskaya/).+$  index.html
 RewriteRule ^(zaporozhskaya/).+$  index.html
 RewriteRule ^(donetskaya/).+$  index.html
 
+RewriteRule ^(home)$  index.html
+RewriteRule ^(add)$  index.html
+
