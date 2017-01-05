@@ -33,5 +33,6 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 ## History
 2017-01-05 
   Добавил разметку формы добавления места.
+  
   Добавил модель данных
 
