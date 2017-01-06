@@ -16,7 +16,7 @@ import { PlaceShortCardComponent } from './components/place-short-card/place-sho
 import { PlaceComponent } from './components/place/place.component';
 import { PlaceFormComponent } from './components/place-form/place-form.component';
 
-import { MenuService } from './services/menu.service';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { MenuService } from './services/menu.service';
     routing
   ],
   providers: [
-    MenuService
+    DataService
   ],
   bootstrap: [AppComponent]
 })

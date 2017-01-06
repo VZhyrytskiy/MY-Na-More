@@ -12,7 +12,10 @@
       },
       { "id": 20,
         "name": "Николаевская область",
-        "link": "nikolaev-region"
+        "link": "nikolaev-region",
+        "cities": [
+          { "id": 64, "name": "Очаков", "link": "ochakov"}
+        ]
       }
     ]
   },
@@ -21,7 +24,12 @@
     "regions": [
       { "id": 21,
         "name": "Херсонская область",
-        "link": "kherson-region"
+        "link": "kherson-region",
+        "cities": [
+          { "id": 65, "name": "Железный Порт", "link": "zhelezniy-port"},
+          { "id": 66, "name": "Лазурное", "link": "lazurnoe"},
+          { "id": 67, "name": "Скадовск", "link": "skadovsk"}
+        ]
       }
     ]
   },
@@ -30,11 +38,18 @@
     "regions": [
       { "id": 22,
         "name": "Запорожская область",
-        "link": "zaporozhya-region"
+        "link": "zaporozhya-region",
+        "cities":[
+          {"id": 9, "name": "г. Бердянск", "link": "berdyansk"},
+          {"id": 68, "name": "г. Приморск", "link": "primorsk"}
+        ]
       },
       { "id": 15,
         "name": "Донецкая область",
-        "link": "donetsk-region"
+        "link": "donetsk-region",
+        "cities": [
+          {"id": 69, "name": "Мариуполь", "link": "mariupol"}
+        ]
       }
     ]
   }

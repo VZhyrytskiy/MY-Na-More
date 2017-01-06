@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class MenuService {
+export class DataService {
 
   constructor(
     private http: Http

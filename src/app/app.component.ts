@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MenuService } from './services/menu.service';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   menuItemsSeaAndRegion: Array<any>;
 
   constructor(
-    private menuService: MenuService
+    private dataService: DataService
   ) { }
 
   ngOnInit() {
-    this.menuService.getSeaAndRegions()
+    this.dataService.getSeaAndRegions()
       .then(data => this.menuItemsSeaAndRegion = data);
   }
 }
