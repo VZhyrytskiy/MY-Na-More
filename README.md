@@ -31,7 +31,7 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## History
-2-17-01-06
+2017-01-06
   * Добавил сервис MenuService и заменил статическое меню "Выбрать место" на динамическое, 
   которое строится на основе данных модели. Использовал *ngFor, *ngIf, &lt;ng-container&gt; 
 
