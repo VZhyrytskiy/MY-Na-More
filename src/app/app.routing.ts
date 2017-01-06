@@ -28,15 +28,15 @@ const appRoutes: Routes = [
     component: PlaceFormComponent
   },
   {
-    path: ':oblast/oblast',
+    path: ':oblast',
     component: OblastComponent
   },
    {
-    path: ':oblast/oblast/:city',
+    path: ':oblast/:city',
     component: CityComponent
   },
   {
-    path: ':oblast/oblast/:city/:place',
+    path: ':oblast/:city/:place',
     component: PlaceComponent
   },
   {

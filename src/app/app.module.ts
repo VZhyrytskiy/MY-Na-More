@@ -16,6 +16,8 @@ import { PlaceShortCardComponent } from './components/place-short-card/place-sho
 import { PlaceComponent } from './components/place/place.component';
 import { PlaceFormComponent } from './components/place-form/place-form.component';
 
+import { MenuService } from './services/menu.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { PlaceFormComponent } from './components/place-form/place-form.component
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [
+    MenuService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

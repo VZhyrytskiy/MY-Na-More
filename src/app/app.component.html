@@ -15,22 +15,21 @@
         <ul class="nav navbar-nav">
           <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
 
+          <!--Выпадающее меню "Выбрать место"-->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Выбрать место<span class="caret"></span></a>
+              Выбрать место<span class="caret"></span>
+            </a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-header">Черное море</li>
-              <li routerLinkActive="active"><a href="#" [routerLink]="['/odesskaya/oblast']">Одесская область</a></li>
-              <li routerLinkActive="active"><a href="#" [routerLink]="['/nikolaevskaya/oblast']">Николаевская область</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Черное и Азовское море</li>
-              <li routerLinkActive="active"><a href="#" [routerLink]="['/khersonskaya/oblast']">Херсонская область</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Азовское море</li>
-              <li routerLinkActive="active"><a href="#" [routerLink]="['/zaporozhskaya/oblast']">Запорожская область</a></li>
-              <li routerLinkActive="active"><a href="#" [routerLink]="['/donetskaya/oblast']">Донецкая область</a></li>
+              <ng-container *ngFor="let menuItem of menuItemsSeaAndRegion; let isLast = last">
+                <li class="dropdown-header" >{{menuItem.sea}}</li>
+                <li *ngFor="let region of menuItem.regions"
+                    routerLinkActive="active">
+                    <a href="#" [routerLink]="['/' + region.link]">{{region.name}}</a></li>
+                <li *ngIf="!isLast" class="divider"></li>
+              </ng-container>
             </ul>
-          </li>
+          </li> <!-- Конец Выпадающее меню "Выбрать место"-->
 
           <li routerLinkActive="active"><a href="#" [routerLink]="['/add']">Добавить место</a></li>
           <li routerLinkActive="active"><a href="#" [routerLink]="['/catalog']">Подобрать место</a></li>
