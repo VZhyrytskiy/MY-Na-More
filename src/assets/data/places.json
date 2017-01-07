@@ -40,8 +40,8 @@
         "name": "Запорожская область",
         "link": "zaporozhya-region",
         "cities":[
-          {"id": 9, "name": "г. Бердянск", "link": "berdyansk"},
-          {"id": 68, "name": "г. Приморск", "link": "primorsk"}
+          {"id": 9, "name": "Бердянск", "link": "berdyansk"},
+          {"id": 68, "name": "Приморск", "link": "primorsk"}
         ]
       },
       { "id": 15,

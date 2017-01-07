@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home';
 import { AboutComponent } from './components/about';
 import { PageNotFoundComponent } from './components/page-not-found';
-import { OblastComponent } from './components/oblast';
+import { RegionComponent } from './components/region';
 import { CityComponent } from './components/city';
 import { PlaceComponent } from './components/place';
 import { PlaceFormComponent } from './components/place-form';
@@ -28,15 +28,15 @@ const appRoutes: Routes = [
     component: PlaceFormComponent
   },
   {
-    path: ':oblast',
-    component: OblastComponent
+    path: ':region',
+    component: RegionComponent
   },
    {
-    path: ':oblast/:city',
+    path: ':region/:city',
     component: CityComponent
   },
   {
-    path: ':oblast/:city/:place',
+    path: ':region/:city/:place',
     component: PlaceComponent
   },
   {

@@ -25,4 +25,27 @@ export class DataService {
     return Promise.reject(error.message || error);
   }
 
+  // метод по заданому региону, например odessa-region возвращает города
+  getRegion(searchRegion: string) {
+    return this.getSeaAndRegions()
+    .then(response => {
+        let region;
+
+      // цикл поморям
+        response.forEach((sea) => {
+
+        //  если еще область не нашли, то ищем
+        if (!region) {
+          // фильтр по областям моря
+          region = sea.regions.find((reg) => {
+            return reg.link === searchRegion;
+          });
+        }
+      });
+      return region;
+    });
+  }
+
+
+
 }
