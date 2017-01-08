@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-place-short-card',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./place-short-card.component.css']
 })
 export class PlaceShortCardComponent implements OnInit {
+  @Input() place: any;
 
   constructor() { }
 

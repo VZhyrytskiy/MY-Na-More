@@ -14,7 +14,7 @@ export class DataService {
    * Метод возвращает промис модели данных
    */
   getSeaAndRegions(): Promise<any> {
-    return this.http.get('/assets/data/places.json')
+    return this.http.get('/assets/data/cities.json')
       .toPromise()
       .then(response => response.json())
       .catch(this.handleError);
@@ -25,7 +25,9 @@ export class DataService {
     return Promise.reject(error.message || error);
   }
 
-  // метод по заданому региону, например odessa-region возвращает города
+  /**
+   * метод по заданому региону, например odessa-region возвращает города
+   */
   getRegion(searchRegion: string) {
     return this.getSeaAndRegions()
     .then(response => {
@@ -44,6 +46,30 @@ export class DataService {
       });
       return region;
     });
+  }
+
+  /**
+   * метод по заданому городу, например zatoka,возвращает места
+   */
+  getCity(searchRegion: string, searchCity: string) {
+    return this.getRegion(searchRegion)
+            .then( response => {
+              return response.cities.find(city => city.link === searchCity);
+            });
+  }
+
+  /**
+   * метод возвращает массив мест указаного города
+   */
+  getPlaces(cityId: number): Promise<any> {
+    return this.http.get('/assets/data/places.json')
+      .toPromise()
+      .then(response => response.json())
+      .then(response => {
+        let res = response.find(obj => +obj.cityId === +cityId);
+        return res.places;
+     })
+    .catch(this.handleError);
   }
 
 

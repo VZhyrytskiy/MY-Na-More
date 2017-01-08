@@ -1,56 +1,7 @@
 [
-  { "id": 1,
-    "sea": "Черное море",
-    "regions": [
-      { "id": 23,
-        "name": "Одесская область",
-        "link": "odessa-region",
-        "cities": [
-          { "id": 5, "name": "Одесса", "link": "odessa"},
-          { "id": 63, "name": "Затока", "link": "zatoka"}
-        ]
-      },
-      { "id": 20,
-        "name": "Николаевская область",
-        "link": "nikolaev-region",
-        "cities": [
-          { "id": 64, "name": "Очаков", "link": "ochakov"}
-        ]
-      }
-    ]
-  },
-  { "id": 2,
-    "sea": "Черное и Азовское море",
-    "regions": [
-      { "id": 21,
-        "name": "Херсонская область",
-        "link": "kherson-region",
-        "cities": [
-          { "id": 65, "name": "Железный Порт", "link": "zhelezniy-port"},
-          { "id": 66, "name": "Лазурное", "link": "lazurnoe"},
-          { "id": 67, "name": "Скадовск", "link": "skadovsk"}
-        ]
-      }
-    ]
-  },
-  { "id": 3,
-    "sea": "Азовское море",
-    "regions": [
-      { "id": 22,
-        "name": "Запорожская область",
-        "link": "zaporozhya-region",
-        "cities":[
-          {"id": 9, "name": "Бердянск", "link": "berdyansk"},
-          {"id": 68, "name": "Приморск", "link": "primorsk"}
-        ]
-      },
-      { "id": 15,
-        "name": "Донецкая область",
-        "link": "donetsk-region",
-        "cities": [
-          {"id": 69, "name": "Мариуполь", "link": "mariupol"}
-        ]
-      }
+  { "cityId": 63,
+    "places": [
+      { "id": 1, "name": "Лилия", "link": "liliya"}
     ]
   }
 ]
