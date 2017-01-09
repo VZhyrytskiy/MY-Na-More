@@ -7,6 +7,8 @@ import { Component, Input,  OnInit } from '@angular/core';
 })
 export class PlaceShortCardComponent implements OnInit {
   @Input() place: any;
+  @Input() region: string;
+  @Input() city: string;
 
   constructor() { }
 

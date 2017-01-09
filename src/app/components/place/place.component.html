@@ -1,37 +1,24 @@
 <div>
   <ol class="breadcrumb">
     <li><a href="#" [routerLink]="['/']">Главная</a></li>
-    <li><a href="#" [routerLink]="['/odessa-region']">Одесская область</a></li>
-    <li><a href="#" [routerLink]="['/odessa-region/zatoka']">Затока</a></li>
-    <li class="active">База отдыха "Лилия"</li>
+    <li><a href="#" [routerLink]="['/' + region?.link]">{{region?.name}}</a></li>
+    <li><a href="#" [routerLink]="['/' + region?.link + '/' + city?.link]">{{city?.name}}</a></li>
+    <li class="active">{{place?.name}}</li>
   </ol>
 
   <div>
     <div class="row">
       <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-        <h2>База отдыха "Лилия"</h2>
+        <h2>{{place?.name}}</h2>
         <div class="photo-container">
-          <img src="/assets/images/000001-001.jpg">
-          <img src="/assets/images/000001-002.jpg">
-          <img src="/assets/images/000001-003.jpg">
-          <img src="/assets/images/000001-004.jpg">
-          <img src="/assets/images/000001-005.jpg">
+          <img *ngFor="let photoLink of place?.photoLinks" [src]="photoLink">
         </div>
 
         <h3>Размещение</h3>
-        <p>Котедж семейного типа под названием «Лилия» расположен в стороне от шумной и многолюдной первой линии. И больше подходит для отдыха семейных пар, молодоженов и людей ведущих здоровый образ жизни, и не злоупотребляющими спиртными напитками. Желающие отдохнуть от повседневной суеты, работы и бизнеса.</p>
-        <p>
-          В 3-х этажном здании есть 2,3 и 4-х местные номера со всеми удобствами: в каждом номере есть кондиционер и санузел в котором душевая кабинка, умывальник, унитаз.
-        </p>
-        <p>
-          В оплату включено: проживание, коммунальные расходы, уборка номера по требованию, спутниковое ТV, пользование столовой и кухней, Wi-Fi на территории, утюг, фен, чайник в номер, шампура, мангал.
-        </p>
+        <div [innerHTML]="place?.accommodation"></div>
 
         <h3>Питание</h3>
-        <ul>
-          <li>самостоятельное приготовление;</li>
-          <li>заказ в столовой в 100 метрах от котеджа.</li>
-        </ul>
+        <div [innerHTML]="place?.food"></div>
 
         <h3>Цены</h3>
         <p>

@@ -12,9 +12,11 @@ import { DataService } from './../../services/data.service';
 })
 export class CityComponent implements OnInit {
   private sub: Subscription;
-  private region: string;       // параметр роута
-  private regionName: string;   // название области
-  private city: any;            // параметр роута
+  private regionParam: string;     // параметр роута
+  private cityParam: string;      // параметр роута
+
+  private region: any;   // объект область
+  private city: any;     //объект город
   private places: Array<any>;   // массив мест
 
   constructor(
@@ -25,12 +27,21 @@ export class CityComponent implements OnInit {
   ngOnInit() {
      this.sub = this.activatedRoute.params.subscribe(params => {
       // получаем параметры из урла
-      this.region = params['region'];
-      this.city = params['city'];
+      this.regionParam = params['region'];
+      this.cityParam = params['city'];
 
-      // получаем информацию о городе
-      this.dataService.getCity(this.region, this.city)
-        .then(response => this.city = response)
+      // получаем область
+      this.dataService.getRegion(this.regionParam)
+        .then(response => {
+          // console.log(response);
+          this.region = response;
+        });
+
+      // получаем город
+      this.dataService.getCity(this.regionParam, this.cityParam)
+        .then(response => {
+          return this.city = response;
+        })
         .then(city => {
           // получаем места города
           this.dataService.getPlaces(city.id)

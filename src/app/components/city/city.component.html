@@ -1,17 +1,20 @@
 <div>
   <ol class="breadcrumb">
     <li><a href="#" [routerLink]="['/']">Главная</a></li>
-    <li><a href="#" [routerLink]="['/odessa-region']">Одесская область</a></li>
-    <li class="active">{{city.name}}</li>
+    <li><a href="#" [routerLink]="['/' + region?.link]">{{region?.name}}</a></li>
+    <li class="active">{{city?.name}}</li>
   </ol>
 
   <div>
     <div class="row">
       <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-        <h2>{{city.name}}</h2>
+        <h2>{{city?.name}}</h2>
         <div class="row">
           <div class="col-xs-12 col-sm-6" *ngFor="let place of places">
-            <app-place-short-card [place]="place"></app-place-short-card>
+            <app-place-short-card
+              [region]="region"
+              [city]="city"
+              [place]="place"></app-place-short-card>
           </div>
         </div>
 

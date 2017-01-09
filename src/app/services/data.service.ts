@@ -67,9 +67,17 @@ export class DataService {
       .then(response => response.json())
       .then(response => {
         let res = response.find(obj => +obj.cityId === +cityId);
-        return res.places;
+        return res ? res.places : [];
      })
     .catch(this.handleError);
+  }
+
+  getPlace(cityId: number, placeLink: string): Promise<any> {
+    return this.getPlaces(cityId)
+      .then(response => {
+        return response.find(place => place.link === placeLink);
+      });
+
   }
 
 
