@@ -3,6 +3,10 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-01-10
+  * Внес изменения в разметку компонентов RegionComponent, CityComponent, PlaceComponent
+  * Внес данные в модель данных места
+
 2017-01-09
   * Добавил в сервис DataService метод получения места.
   * Полностью убрал статику из компонента CityComponent
@@ -16,7 +20,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
   * Добавил входные данные для компонента PlaceShortCard и заменил частично статику
 
 2017-01-07
-  * Переименовал компонент область на регион, убрал статику, добавил динамику.
+  * Переименовал компонент OblastComponent на RegionComponent, убрал статику, добавил динамику.
   * Добавил в сервис DataService метод получения информации о регионе
 
 2017-01-06
@@ -25,11 +29,11 @@ This project was generated with [angular-cli](https://github.com/angular/angular
   * Добавил несколько городов в модель
 
 2017-01-05 
-  * Добавил разметку формы добавления места.
+  * Добавил разметку для компонента PlacaFormComponent.
   * Добавил модель данных
 
 2017-01-03
-  * Добавил основные компоненты и разметку 
+  * Добавил основные компоненты и разметку: AboutComponent, Ad160x160Component, HomeComponent, PageNotFoundComponent, 
   * Подключил bootstrap css
 
 2017-01-02

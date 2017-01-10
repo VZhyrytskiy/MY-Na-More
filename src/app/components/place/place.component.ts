@@ -17,8 +17,8 @@ export class PlaceComponent implements OnInit {
   private placeParam: string;     // параметр роута
 
   private region: any;   // объект область
-  private city: any;     //объект город
-  private place: any;   // место
+  private city: any;     // объект город
+  private place: any;    // место
 
    constructor(
     private activatedRoute: ActivatedRoute,

@@ -1,92 +1,44 @@
-<div>
-  <ol class="breadcrumb">
-    <li><a href="#" [routerLink]="['/']">Главная</a></li>
-    <li><a href="#" [routerLink]="['/' + region?.link]">{{region?.name}}</a></li>
-    <li><a href="#" [routerLink]="['/' + region?.link + '/' + city?.link]">{{city?.name}}</a></li>
-    <li class="active">{{place?.name}}</li>
-  </ol>
+<div class="row">
+  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+    <ol class="breadcrumb">
+      <li><a href="#" [routerLink]="['/']">Главная</a></li>
+      <li><a href="#" [routerLink]="['/' + region?.link]">{{region?.name}}</a></li>
+      <li><a href="#" [routerLink]="['/' + region?.link + '/' + city?.link]">{{city?.name}}</a></li>
+      <li class="active">{{place?.name}}</li>
+    </ol>
 
-  <div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-        <h2>{{place?.name}}</h2>
-        <div class="photo-container">
-          <img *ngFor="let photoLink of place?.photoLinks" [src]="photoLink">
-        </div>
+    <h2>{{place?.name}}</h2>
 
-        <h3>Размещение</h3>
-        <div [innerHTML]="place?.accommodation"></div>
+    <h3>Размещение</h3>
+    <div [innerHTML]="place?.accommodation"></div>
 
-        <h3>Питание</h3>
-        <div [innerHTML]="place?.food"></div>
+    <h3>Питание</h3>
+    <div [innerHTML]="place?.food"></div>
 
-        <h3>Цены</h3>
-        <p>
-          Ориентировочная стоимость проживания грн/сутки за номер на 2016 год
-        </p>
-        <ul>
-          <li>2-х местный — 600</li>
-          <li>3-х местный — 700</li>
-        </ul>
+    <h3>Цены</h3>
+    <div [innerHTML]="place?.price"></div>
 
-        <h3>Инфраструктура</h3>
-        <p>
-          Расстояния до кафе, магазинов, столовой и пляжа 180-200 метров. Котедж расположен на закрытой территории, оборудован детской площадкой, летней столовой, альтанкой, кухней, мангалом. Парковка для транспорта (20 грн/сутки).
-        </p>
+    <h3>Инфраструктура</h3>
+    <div [innerHTML]="place?.infrastructure"></div>
 
-        <h3>Пляж</h3>
-        <p>180м.</p>
+    <h3>Пляж</h3>
+    <div [innerHTML]="place?.beach"></div>
 
-        <h3>Фото</h3>
-        <div class="photo-container">
-          <img src="/assets/images/000001-001.jpg">
-          <img src="/assets/images/000001-002.jpg">
-          <img src="/assets/images/000001-003.jpg">
-          <img src="/assets/images/000001-004.jpg">
-          <img src="/assets/images/000001-005.jpg">
-          <img src="/assets/images/000001-006.jpg">
-          <img src="/assets/images/000001-007.jpg">
-          <img src="/assets/images/000001-008.jpg">
-          <img src="/assets/images/000001-009.jpg">
-          <img src="/assets/images/000001-010.jpg">
-          <img src="/assets/images/000001-011.jpg">
-          <img src="/assets/images/000001-012.jpg">
-          <img src="/assets/images/000001-013.jpg">
-          <img src="/assets/images/000001-014.jpg">
-          <img src="/assets/images/000001-015.jpg">
-        </div>
-
-        <h3>Дополнительная информация</h3>
-        <p>
-          Мы принимаем на отдых детей с 2-х лет. Всем любителям и хозяевам домашних животных, хоть они и привиты и являются членом вашей семьи, запрещается отдыхать с животными. Все кто приезжает поездом или маршруткой с Одессы, заранее предупреждать о том что вас нужно встретить.
-        </p>
-        <p><strong>Бронирование</strong></p>
-        <ul>
-          <li>Предварительное по телефону.</li>
-          <li>Гарантированное после полученной предоплаты на приват банковскую карточку в размере суточной стоимости проживания номера.</li>
-        </ul>
-        <p><strong>Обязательно</strong> — за 5 дней до заезда подтвердить даты звезда и выезда – количество взрослых и детей, их возраст.</p>
-        <p>
-          Аннулирование бронирования производится за 10 дней до заезда без штрафа, позже штраф с удержанием предоплаты за бронирование за 1 сутки.
-        </p>
-        <p><strong>Регистрация.</strong></p>
-        <ul>
-          <li>Предоставить паспорт.</li>
-          <li>Время заезда не ограничено.</li>
-          <li>Полный расчет при поселении.</li>
-          <li>При досрочном отъезде — удерживается стоимость проживания за 1 сутки.</li>
-        </ul>
-
-
-
-        <h3>Контакты</h3>
-        <p>Будакская коса №11. Дом моряка.</p>
-        <strong>Телефоны:</strong>
-        +38(097)82-47-511 Лилия
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
-        <app-ad160x600></app-ad160x600>
-      </div>
+    <h3>Фото</h3>
+    <div class="photo-container">
+      <img *ngFor="let photoLink of place?.photoLinks" [src]="photoLink">
     </div>
+
+    <h3>Дополнительная информация</h3>
+    <div [innerHTML]="place?.addInfo"></div>
+
+    <h3>Контакты</h3>
+    <div [innerHTML]="place?.contacts"></div>
+
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
+    <app-ad160x600></app-ad160x600>
   </div>
 </div>
+
+

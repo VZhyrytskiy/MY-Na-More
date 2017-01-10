@@ -1,22 +1,18 @@
-<div>
-  <ol class="breadcrumb">
-    <li><a href="#" [routerLink]="['/']">Главная</a></li>
-    <li class="active">{{regionName}}</li>
-  </ol>
+<div class="row">
+  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+    <ol class="breadcrumb">
+      <li><a href="#" [routerLink]="['/']">Главная</a></li>
+      <li class="active">{{regionName}}</li>
+    </ol>
 
-  <div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-        <h2>{{regionName}}</h2>
-        <ul>
-          <li *ngFor="let city of cities">
-            <h3><a href="#" [routerLink]="['/' + region + '/' + city.link]">{{city.name}}</a></h3>
-          </li>
-        </ul>
-      </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
-        <app-ad160x600></app-ad160x600>
-      </div>
-    </div>
+    <h2>{{regionName}}</h2>
+    <ul>
+      <li *ngFor="let city of cities">
+        <h3><a href="#" [routerLink]="['/' + region + '/' + city.link]">{{city.name}}</a></h3>
+      </li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
+    <app-ad160x600></app-ad160x600>
   </div>
 </div>
