@@ -3,6 +3,10 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-01-11
+  * Добавил CKEditor.
+  * Внедрил CKEditor в компонент PlaceFormComponent
+
 2017-01-10
   * Внес изменения в разметку компонентов RegionComponent, CityComponent, PlaceComponent
   * Внес данные в модель данных места
