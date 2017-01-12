@@ -1,64 +1,60 @@
-<div>
-  <ol class="breadcrumb">
-    <li><a href="#" [routerLink]="['/']">Главная</a></li>
-    <li class="active">Добавить место</li>
-  </ol>
+<div class="row">
+  <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+    <ol class="breadcrumb">
+      <li><a href="#" [routerLink]="['/']">Главная</a></li>
+      <li class="active">Добавить место</li>
+    </ol>
 
-  <div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
-        <h2>Добавление нового места</h2>
-        <!--Форма -->
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Размещение</label>
-            <textarea id="accommodationField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Питание</label>
-            <textarea id="foodField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Цены</label>
-            <textarea id="priceField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Инфраструктура</label>
-            <textarea id="infrastructureField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Пляж</label>
-            <textarea id="beachField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Дополнительная информация</label>
-            <textarea id="addInfoField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Контакты</label>
-            <textarea id="contactsField" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Ваше ФИО</label>
-            <input type="text" class="form-control" id="inputEmail3">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Ваш Email</label>
-            <input type="email" class="form-control" id="inputEmail3">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Ваш телефон</label>
-            <input type="text" class="form-control" id="inputEmail3">
-          </div>
-          <button type="submit" class="btn btn-primary">Сохранить</button>
-          <button type="submit" class="btn btn-default">Отменить</button>
-        </form>
-        <!--Конец формы -->
+    <h2>Добавление нового места</h2>
+    <!--Форма -->
+    <form name="placeForm" (submit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="accommodationField">Размещение</label>
+        <textarea id="accommodationField" name="accommodationField" class="form-control" rows="3"></textarea>
       </div>
-      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
-        <app-ad160x600></app-ad160x600>
+      <div class="form-group">
+        <label for="foodField">Питание</label>
+        <textarea id="foodField" class="form-control" rows="3"></textarea>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="priceField">Цены</label>
+        <textarea id="priceField" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="infrastructureField">Инфраструктура</label>
+        <textarea id="infrastructureField" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="beachField">Пляж</label>
+        <textarea id="beachField" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="addInfoField">Дополнительная информация</label>
+        <textarea id="addInfoField" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="contactsField">Контакты</label>
+        <textarea id="contactsField" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="contactPerson">Ваше ФИО</label>
+        <input type="text" class="form-control" id="contactPerson">
+      </div>
+      <div class="form-group">
+        <label for="contactEmail">Ваш Email</label>
+        <input type="email" class="form-control" id="contactEmail">
+      </div>
+      <div class="form-group">
+        <label for="contactPhone">Ваш телефон</label>
+        <input type="text" class="form-control" id="contactPhone">
+      </div>
+      <button type="submit" class="btn btn-primary">Сохранить</button>
+      <button type="submit" class="btn btn-default">Отменить</button>
+    </form>
+    <!--Конец формы -->
+  </div>
+  <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 text-center">
+    <app-ad160x600></app-ad160x600>
   </div>
 </div>
 

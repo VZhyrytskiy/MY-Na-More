@@ -6,6 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./place-form.component.css']
 })
 export class PlaceFormComponent implements OnInit {
+// поля формы
+  private place = {
+    accommodation: '',
+    food: '',
+    price: '',
+    infrastructure: '',
+    beach: '',
+    addInfo: '',
+    contacts: ''
+  };
 
   constructor() { }
 
@@ -13,13 +23,28 @@ export class PlaceFormComponent implements OnInit {
     /**
      * инициализация редактора для текстерия полей
      */
-    window['CKEDITOR']['replace']( 'accommodationField' );
-    window['CKEDITOR']['replace']( 'foodField' );
-    window['CKEDITOR']['replace']( 'priceField' );
-    window['CKEDITOR']['replace']( 'infrastructureField' );
-    window['CKEDITOR']['replace']( 'beachField' );
-    window['CKEDITOR']['replace']( 'addInfoField' );
-    window['CKEDITOR']['replace']( 'contactsField' );
+    for (let key in this.place) {
+      if (this.place.hasOwnProperty(key)) {
+        window['CKEDITOR']['replace'](`${key}Field`);
+      }
+    }
+
+    // установка значения
+    // window['CKEDITOR'].instances.accommodationField.setData('1111');
+  }
+
+  onSubmit(event: any) {
+    // получение значения полей
+    let ckEditor = window['CKEDITOR'].instances;
+
+    for (let key in this.place) {
+      if (this.place.hasOwnProperty(key)) {
+        this.place[key] = ckEditor[`${key}Field`].getData();
+      }
+    }
+
+    // вывод значений полей
+    console.log(this.place);
   }
 
 }
