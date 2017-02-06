@@ -3,6 +3,9 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-02-06
+  * Создан интерфейс IPlace, класс Place
+  * Доработан сбор данных с полей компонента PlaceFormComponent
 2017-01-12
   * Доработка компонента PlaceFormComponent - сбор данных формы
 

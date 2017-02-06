@@ -7,7 +7,12 @@
 
     <h2>Добавление нового места</h2>
     <!--Форма -->
-    <form name="placeForm" (submit)="onSubmit($event)">
+    <form name="placeForm" novalidate #placeForm="ngForm" (submit)="onSubmit(placeForm)">
+      <div class="form-group">
+        <label for="name">Название</label>
+        <input type="text" class="form-control" id="name" name="name"
+        [(ngModel)]="place.name">
+      </div>
       <div class="form-group">
         <label for="accommodationField">Размещение</label>
         <textarea id="accommodationField" name="accommodationField" class="form-control" rows="3"></textarea>
@@ -38,15 +43,18 @@
       </div>
       <div class="form-group">
         <label for="contactPerson">Ваше ФИО</label>
-        <input type="text" class="form-control" id="contactPerson">
+        <input type="text" class="form-control" id="contactPerson" name="contactPerson"
+        [(ngModel)]="place.contactPerson">
       </div>
       <div class="form-group">
         <label for="contactEmail">Ваш Email</label>
-        <input type="email" class="form-control" id="contactEmail">
+        <input type="email" class="form-control" id="contactEmail" name="contactEmail"
+        [(ngModel)]="place.contactEmail">
       </div>
       <div class="form-group">
         <label for="contactPhone">Ваш телефон</label>
-        <input type="text" class="form-control" id="contactPhone">
+        <input type="text" class="form-control" id="contactPhone" name="contactPhone"
+        [(ngModel)]="place.contactPhone">
       </div>
       <button type="submit" class="btn btn-primary">Сохранить</button>
       <button type="submit" class="btn btn-default">Отменить</button>
