@@ -3,6 +3,9 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-02-13
+  * Разработан API для Place
+
 2017-02-11
   * Создана структура в базе данных для хранения данных.
   * Переход на Angular-CLI beta-31
