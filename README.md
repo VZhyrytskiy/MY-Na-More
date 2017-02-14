@@ -3,6 +3,10 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-02-14
+  * Работа над API для Place (POST)
+  * Доработан сервис DataService
+
 2017-02-13
   * Разработан API для Place
 
@@ -13,7 +17,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 2017-02-06
   * Создан интерфейс IPlace, класс Place
   * Доработан сбор данных с полей компонента PlaceFormComponent
-  
+
 2017-01-12
   * Доработка компонента PlaceFormComponent - сбор данных формы
 
@@ -42,16 +46,16 @@ This project was generated with [angular-cli](https://github.com/angular/angular
   * Добавил в сервис DataService метод получения информации о регионе
 
 2017-01-06
-  * Добавил сервис DataService и заменил статическое меню "Выбрать место" на динамическое, 
-    которое строится на основе данных модели. Использовал *ngFor, *ngIf, &lt;ng-container&gt; 
+  * Добавил сервис DataService и заменил статическое меню "Выбрать место" на динамическое,
+    которое строится на основе данных модели. Использовал *ngFor, *ngIf, &lt;ng-container&gt;
   * Добавил несколько городов в модель
 
-2017-01-05 
+2017-01-05
   * Добавил разметку для компонента PlacaFormComponent.
   * Добавил модель данных
 
 2017-01-03
-  * Добавил основные компоненты и разметку: AboutComponent, Ad160x160Component, HomeComponent, PageNotFoundComponent, 
+  * Добавил основные компоненты и разметку: AboutComponent, Ad160x160Component, HomeComponent, PageNotFoundComponent,
   * Подключил bootstrap css
 
 2017-01-02

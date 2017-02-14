@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { IPlace, Place } from './../models/';
+import { IPlace, Place } from './../../models/';
+import { DataService } from './../../services';
 
 @Component({
   selector: 'app-place-form',
@@ -16,7 +17,9 @@ export class PlaceFormComponent implements OnInit {
   private txtAreaFields: Array<string> = ['accommodation', 'food', 'price',
     'infrastructure', 'beach', 'addInfo', 'contacts'];
 
-  constructor() { }
+  constructor(
+    private dataSerice: DataService
+  ) { }
 
   ngOnInit() {
     /**
@@ -40,6 +43,7 @@ export class PlaceFormComponent implements OnInit {
 
     // вывод значений полей
     console.log(this.place);
+    this.dataSerice.savePlace(this.place).subscribe();
   }
 
 }
