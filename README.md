@@ -3,6 +3,9 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## История
+2017-02-15
+  * Доработка API для PLACE
+
 2017-02-14
   * Работа над API для Place (POST)
   * Доработан сервис DataService
